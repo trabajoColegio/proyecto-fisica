@@ -101,8 +101,12 @@ const comprobarVariablesFisica = () => {
 
 
 $btn.addEventListener("click", e => {
-  (!comprobarInputs(".dato input"))
-  ? $errorMsg.classList.remove("hidden")
-  :$errorMsg.classList.add("hidden")
-  comprobarVariablesFisica()
+  if (!comprobarInputs(".dato input")) {
+   $errorMsg.classList.remove("hidden")
+   $resultado.textContent = "no se puede realizar la operación"
+  }  
+  else {
+    $errorMsg.classList.add("hidden")
+    comprobarVariablesFisica()
+  }
 })
