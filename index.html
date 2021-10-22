@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de termodinámica</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <h1>Calculadora de <x class="purple">termodinámica</x>
+    </h1>
+  </header>
+
+  <section class="calculadora">
+    <p>Completa los siguientes campos con la información que poseas y la página se encargará de calcular los demás
+      datos.
+    </p><br>
+    <div class="datos">
+      <div class="dato">
+        <p>Presión inicial:</p>
+        <input type="text" class="pi">
+      </div>
+      <div class="dato">
+        <p>Presión final:</p>
+        <input type="text" class="pf">
+      </div>
+      <div class="dato">
+        <p>Temperatura inicial (ºk):</p>
+        <input type="text" class="ti">
+      </div>
+      <div class="dato">
+        <p>Temperatura final (ºk):</p>
+        <input type="text" class="tf">
+      </div>
+      <div class="dato">
+        <p>Volumen inicial:</p>
+        <input type="text" class="vi">
+      </div>
+      <div class="dato">
+        <p>Volumen final:</p>
+        <input type="text" class="vf">
+      </div>
+    </div>
+    <button>Calcular</button>
+    <p class="valor-invalido hidden">Algun valor ingresado es invalido</p>
+    <p class="resultado"></p>
+  </section>
+
+  <script src="script.js" type="module"></script>
+</body>
+
+</html>

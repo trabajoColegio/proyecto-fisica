@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+}
+
+:root {
+  --whitesmoke: whitesmoke;
+  --sans-serif: "Poppins", sans-serif;
+  --purple: rgb(151, 0, 251);
+  --purple-hover: rgb(102, 0, 170);
+}
+
+html {
+  background-color: var(--whitesmoke);
+}
+
+header {
+  height: 75vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+
+header h1 {
+  color: var(--whitesmoke);
+  font-family: var(--sans-serif);
+  font-weight: 400;
+  width: 50vw;
+  font-size: 6vw;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.purple {
+  color: var(--purple);
+}
+
+/*Calculadora*/
+
+.calculadora {
+  width: 65vw;
+  min-height: 100vh;
+  background-color: whitesmoke;
+  display: block;
+  margin: auto;
+  margin-top: -30vh;
+  padding: 5rem;
+}
+
+.calculadora p {
+  font-size: 2.5rem;
+  font-family: var(--sans-serif);
+  text-align: justify;
+}
+
+.datos {
+  padding-bottom: 4rem;
+}
+
+.datos p {
+  margin-right: 1rem;
+  display: inline-block;
+}
+
+input {
+  width: 7rem;
+  height: 2.5rem;
+  border: none;
+  outline: none;
+  font-size: 2.5rem;
+  background-color: var(--whitesmoke);
+  border-bottom: 3px black solid;
+  text-align: center;
+}
+
+input:focus {
+  border-bottom: 3px var(--purple) solid;
+}
+
+.dato {
+  padding: 2.5rem 0;
+}
+
+button {
+  background-color: var(--purple);
+  font-size: 2.5rem;
+  color: var(--whitesmoke);
+  padding: 1rem 2rem;
+  font-family: var(--sans-serif);
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+  display: inline-block;
+}
+
+button:hover {
+  background-color: var(--purple-hover);
+}
+
+.valor-invalido {
+  display: inline-block;
+  padding-left: 4rem;
+  color: var(--purple);
+  transition: 0.5s;
+  cursor: default;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.resultado {
+  padding-top: 5rem;
+}
