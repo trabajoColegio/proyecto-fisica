@@ -59,31 +59,43 @@ const comprobarVariablesFisica = () => {
     resultado = (pf * vf * ti)/(vi * tf)
     contador ++
     justificacion = `Teniendo en cuenta que se está buscando la presión inicial (pi), debemos utilizar la ecuación pi = (pf * vf * ti)/(vi * tf), lo cual sería: pi = (${pf} * ${vf} * ${ti})/(${vi} * ${tf}). El resultado es ${resultado.toFixed(2)}`
+    d.querySelector(".pi").value = resultado.toFixed(2)
+    d.querySelector(".pi").classList.add("purple")
   }
   if (isNaN(vi)){
     resultado = (pf * vf * ti)/(pi * tf)
     contador ++
     justificacion = `Teniendo en cuenta que se está buscando el volumen inicial (vi), debemos utilizar la ecuación vi = (pf * vf * ti)/(pi * tf), lo cual sería: vi = (${pf} * ${vf} * ${ti})/(${pi} * ${tf}). El resultado es ${resultado.toFixed(2)}`
+    d.querySelector(".vi").value = resultado.toFixed(2)
+    d.querySelector(".vi").classList.add("purple")
   }
   if (isNaN(tf)){
     resultado = (pf * vf * ti)/(pi * vi)
     contador ++
     justificacion = `Teniendo en cuenta que se está buscando la temperatura final (tf), debemos utilizar la ecuación tf = (pf * vf * ti)/(pi * vi), lo cual sería: tf = (${pf} * ${vf} * ${ti})/(${pi} * ${vi}). El resultado es ${resultado.toFixed(2)}`
+    d.querySelector(".tf").value = resultado.toFixed(2)
+    d.querySelector(".tf").classList.add("purple")
   }
   if (isNaN(pf)){
     resultado = (pi * vi * tf)/(vf * ti)
     contador ++
     justificacion = `Teniendo en cuenta que se está buscando la presión final (pf), debemos utilizar la ecuación pf = (pi * vi * tf)/(vf * ti), lo cual sería: pf = (${pi} * ${vi} * ${tf})/(${vf} * ${ti}). El resultado es ${resultado.toFixed(2)}`
+    d.querySelector(".pf").value = resultado.toFixed(2)
+    d.querySelector(".pf").classList.add("purple")
   }
   if (isNaN(vf)){
     resultado = (pi * vi * tf)/(pf * ti)
     contador ++
     justificacion = `Teniendo en cuenta que se está buscando el volumen final (vf), debemos utilizar la ecuación vf = (pi * vi * tf)/(pf * ti), lo cual sería: vf = (${pi} * ${vi} * ${tf})/(${pf} * ${ti}). El resultado es ${resultado.toFixed(2)}`
+    d.querySelector(".vf").value = resultado.toFixed(2)
+    d.querySelector(".vf").classList.add("purple")
   }
   if (isNaN(ti)){
     resultado = (pi * vi * tf)/(pf * vf)
     contador ++
     justificacion = `Teniendo en cuenta que se está buscando la temperatura inicial (ti), debemos utilizar la ecuación ti = (pi * vi * tf)/(pf * vf), lo cual sería: ti = (${pi} * ${vi} * ${tf})/(${pf} * ${vf}). El resultado es ${resultado.toFixed(2)}`
+    d.querySelector(".ti").value = resultado.toFixed(2)
+    d.querySelector(".ti").classList.add("purple")
   }
 
   if(contador !== 1 || simplificado > 1){
@@ -106,7 +118,8 @@ $btn.addEventListener("click", e => {
    $resultado.textContent = "no se puede realizar la operación"
   }  
   else {
-    $errorMsg.classList.add("hidden")
+    $errorMsg.classList.remove("hidden")
     comprobarVariablesFisica()
+    $errorMsg.textContent = "Baja para ver la operación"
   }
 })
