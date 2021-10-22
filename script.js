@@ -90,7 +90,13 @@ const comprobarVariablesFisica = () => {
     $errorMsg.textContent = "Falta algun valor"
     $errorMsg.classList.remove("hidden")
   }
-  $resultado.textContent = justificacion
+
+  if(simplificado == 0){
+    $resultado.textContent = justificacion
+  }
+  else if(simplificado == 1){
+    $resultado.textContent = `${justificacion} (aclaración: hay 2 valores que se encuentran en 1. Están puestos ya que no se encuentra el valor inicial ni final (volumen, presión o temperatura), por lo que suponemos que es constante)`
+  }
 }
 
 
