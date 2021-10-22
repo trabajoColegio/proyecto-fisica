@@ -111,3 +111,7 @@ button:hover {
 .resultado {
   padding-top: 5rem;
 }
+
+.purple {
+  color: var(--purple) !important;
+}
